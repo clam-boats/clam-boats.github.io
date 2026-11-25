@@ -161,6 +161,12 @@ td.num{font-family:var(--mono);font-size:.8rem;white-space:nowrap;font-variant-n
 
 /* press */
 .press{background:var(--blue);color:var(--paper)}
+.press .film{margin:0 0 40px;grid-template-columns:minmax(0,20rem) 1fr;align-items:center}
+.frame.tall{aspect-ratio:9/16}
+.press .film figcaption .label{color:var(--paper)}
+.press .film figcaption p{max-width:44ch;opacity:.92;margin-top:10px}
+@media (max-width:900px){.press .film{grid-template-columns:1fr}.press .frame.tall{max-width:22rem}}
+
 .press .kicker{color:var(--paper)} .press .kicker::after{background:var(--paper)}
 .press h2{font-size:clamp(2.6rem,6vw,4.6rem);color:var(--paper);text-shadow:.05em .035em 0 var(--fluo);margin-bottom:28px}
 .release{display:grid;grid-template-columns:9rem 1fr;gap:24px;padding-block:26px;border-top:2px solid var(--paper)}
@@ -223,6 +229,7 @@ footer p{font-size:.82rem;opacity:.8;max-width:60ch}
       <a href="#boats">Boats</a>
       <a href="#events">Events</a>
       <a href="#prints">Gallery</a>
+      <a href="#crew">Crew</a>
       <a href="#press">Press</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -420,11 +427,35 @@ footer p{font-size:.82rem;opacity:.8;max-width:60ch}
     </div>
   </section>
 
+  <!-- TEAM FILM -->
+  <section id="crew" class="gutter" style="padding-top:0">
+    <div class="page">
+      <div class="kicker label">The crew</div>
+      <h2 class="display plate" style="font-size:clamp(2.6rem,6vw,4.6rem)">Meet the people behind the hulls</h2>
+      <figure class="film" style="margin-top:32px">
+        <div class="frame">
+          <video controls preload="metadata" playsinline poster="team-film-poster.jpg">
+            <source src="team-film.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption><span class="label">Team film · 2 min 19 · in French</span>How CLAM began (the long version, sped up), then our four teams: production, finance, studies and marketing.</figcaption>
+      </figure>
+    </div>
+  </section>
+
   <!-- PRESS RELEASES (min. 3) -->
   <section id="press" class="press gutter">
     <div class="page">
       <div class="kicker label">Press releases</div>
       <h2 class="display">News from the yard</h2>
+      <figure class="film">
+        <div class="frame tall">
+          <video controls preload="metadata" playsinline poster="ceo-interview-poster.jpg">
+            <source src="ceo-interview.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption><span class="label">Interview · 1 min 22 · in French</span><h3 style="font:700 1.3rem/1.25 var(--body);margin:0">Our CEO in the hot seat</h3><p>Crêpes or a raise? GTA or FIFA? Telline or Ormeau? Quick-fire questions, honest answers, in the style of a Konbini interview.</p></figcaption>
+      </figure>
       <article class="release">
         <time datetime="2026-11-20">20.11<small>2026 · Brussels</small></time>
         <div>
