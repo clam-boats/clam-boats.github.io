@@ -159,6 +159,15 @@ td.num{font-family:var(--mono);font-size:.8rem;white-space:nowrap;font-variant-n
 .print{margin:0;background:#fbfbf7;padding:10px 10px 12px;border:1px solid #cfd2c8;box-shadow:4px 5px 0 rgba(22,48,43,.18)}
 .print img{width:100%;height:auto}
 .print figcaption{font:600 .64rem/1.4 var(--mono);text-transform:uppercase;letter-spacing:.05em;margin-top:8px;color:var(--ink-soft)}
+.posters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:22px}
+.posters .print{padding:10px 10px 12px}
+.posters .print:nth-child(1){transform:rotate(-1.2deg)}
+.posters .print:nth-child(3){transform:rotate(1deg)}
+.posters a{display:block}
+.posters-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;margin-top:64px}
+.posters-head h3{font:900 italic clamp(1.8rem,4vw,2.6rem)/.9 var(--display);font-stretch:62%;text-transform:uppercase;margin:0;color:var(--blue);text-shadow:.05em .035em 0 var(--fluo)}
+@media (max-width:900px){.posters{grid-template-columns:1fr 1fr}.posters .print:nth-child(3){grid-column:1/-1;max-width:calc(50% - 14px);justify-self:center}}
+@media (max-width:480px){.posters{grid-template-columns:1fr}.posters .print:nth-child(3){max-width:none}}
 .p1{grid-column:1/8;transform:rotate(-1deg)} .p2{grid-column:8/13;transform:rotate(1.4deg);align-self:center}
 .p3{grid-column:1/6;transform:rotate(.8deg)} .p4{grid-column:6/13;transform:rotate(-.6deg)}
 .p5{grid-column:1/5;transform:rotate(-1.2deg)} .p6{grid-column:5/13;transform:rotate(.7deg);align-self:center}
@@ -437,6 +446,12 @@ footer p{font-size:.82rem;opacity:.8;max-width:60ch}
         <figure class="print p5"><img src="g4-workshop.jpg" alt="A Telline hull in its mould in the Toulon workshop" width="1200" height="900"><figcaption>Moulding workshop, Toulon</figcaption></figure>
         <figure class="print p6"><img src="g6-show.jpg" alt="The CLAM stand at the Paris Boat Show" width="1200" height="900"><figcaption>Our stand, Paris Boat Show</figcaption></figure>
         <figure class="print p7"><img src="g7-harbour.jpg" alt="Three Tellines moored at sunset" width="1200" height="900"><figcaption>Back to harbour</figcaption></figure>
+      </div>
+      <div class="posters-head"><h3>Poster campaign</h3><span class="label" style="color:var(--ink-soft)">« Changer l'avenir marin » · Changing the future at sea</span></div>
+      <div class="posters">
+        <figure class="print"><a href="poster-1.jpg" target="_blank" rel="noopener"><img src="poster-1.jpg" alt="CLAM poster: the CLAM logo repeated in blue with a small wooden boat leaving a wake through the letters. Tagline: Changer l'avenir marin" width="1100" height="1556" loading="lazy"></a><figcaption>Poster 1 · The wake</figcaption></figure>
+        <figure class="print"><a href="poster-2.jpg" target="_blank" rel="noopener"><img src="poster-2.jpg" alt="CLAM poster: a boat seen half above, half below the waterline, CLAM written on the hull. Tagline: Changer l'avenir marin" width="1100" height="1556" loading="lazy"></a><figcaption>Poster 2 · Below the waterline</figcaption></figure>
+        <figure class="print"><a href="poster-3.jpg" target="_blank" rel="noopener"><img src="poster-3.jpg" alt="CLAM poster: wooden hulls in a boatbuilding workshop under a large CLAM title. Text: La résistance au coeur de la construction" width="1100" height="1556" loading="lazy"></a><figcaption>Poster 3 · The workshop</figcaption></figure>
       </div>
     </div>
   </section>
